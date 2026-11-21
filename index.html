@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AccShop Premium - Shop Acc Blox Fruit Uy Tín</title>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root {
+  --bg: #05050f; --bg-2: #0d0d1f; --card: rgba(25, 25, 45, 0.6);
+  --border: rgba(255, 255, 255, 0.1); --accent: #8b5cf6;
+  --accent-2: #06b6d4; --accent-3: #ec4899; --text: #f8fafc;
+  --muted: #94a3b8; --success: #10b981;
+}
+body {
+  font-family: 'Inter', sans-serif; background-color: var(--bg);
+  color: var(--text); line-height: 1.6; overflow-x: hidden;
+  position: relative; min-height: 100vh;
+}
+body::before {
+  content: ''; position: fixed; top: -50%; left: -50%; width: 200%; height: 200%;
+  background: radial-gradient(circle at 50% 50%, rgba(139, 92, 246, 0.15) 0%, transparent 40%),
+              radial-gradient(circle at 80% 20%, rgba(6, 182, 212, 0.15) 0%, transparent 30%);
+  z-index: -1; animation: rotateBg 20s linear infinite;
+}
+@keyframes rotateBg { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+
+.container{max-width:1200px;margin:0 auto;padding:0 20px}
+
+/* HEADER */
+.header { position: sticky; top: 0; z-index: 100; background: rgba(5, 5, 15, 0.6); backdrop-filter: blur(16px); border-bottom: 1px solid var(--border); }
+.header-inner{display:flex;align-items:center;gap:24px;padding:16px 20px}
+.logo{font-family:'Orbitron',sans-serif;font-size:24px;font-weight:900;color:var(--text);text-decoration:none;display:flex;align-items:center;gap:8px;letter-spacing:1px}
+.logo .accent{color:var(--accent);text-shadow: 0 0 15px var(--accent)}
+.logo-icon{font-size: 28px; animation: pulseGlow 2s infinite alternate}
+@keyframes pulseGlow { 0% { filter: drop-shadow(0 0 5px var(--accent)); } 100% { filter: drop-shadow(0 0 20px var(--accent-2)); } }
+.nav{display:flex;gap:24px;margin-left:auto}
+.nav a{color:var(--muted);text-decoration:none;font-weight:600;transition:all .3s; position: relative;}
+.nav a:hover{color:var(--text)}
+.header-actions{display:flex;align-items:center;gap:16px}
+.search-box{position:relative}
+.search-box input{background:rgba(255,255,255,0.05);border:1px solid var(--border);border-radius:12px;padding:10px 14px 10px 38px;color:var(--text);width:200px;font-size:14px;transition:all .3s; outline: none;}
+.search-box input:focus{border-color:var(--accent);width:240px; box-shadow: 0 0 15px rgba(139, 92, 246, 0.3);}
+.search-icon{position:absolute;left:12px;top:50%;transform:translateY(-50%);opacity:.6}
+.cart-btn { background: linear-gradient(135deg, var(--accent), #a855f7); color: #fff; border: none; border-radius: 12px; padding: 10px 20px; font-size: 16px; cursor: pointer; font-weight: 700; display: flex; align-items: center; gap: 8px; transition: all 0.3s; }
+.cart-btn:hover { transform: translateY(-3px); box-shadow: 0 8px 25px rgba(139, 92, 246, 0.6); }
+.cart-count { background: #fff; color: var(--accent); border-radius: 50%; min-width: 22px; height: 22px; font-size: 13px; display: grid; place-items: center; font-weight: 800; }
+
+/* HERO */
+.hero{text-align:center;padding:100px 20px 60px;position:relative}
+.hero-title{font-family:'Orbitron',sans-serif;font-size:clamp(32px,6vw,64px);font-weight:900;line-height:1.1; text-transform: uppercase;}
+.gradient{background:linear-gradient(90deg,var(--accent),var(--accent-2),var(--accent-3));-webkit-background-clip:text;background-clip:text;color:transparent; background-size: 200% auto; animation: shine 3s linear infinite;}
+@keyframes shine { to { background-position: 200% center; } }
+.hero-sub{color:var(--muted);margin-top:20px;font-size:18px; max-width: 600px; margin-inline: auto;}
+.hero-stats{display:flex;justify-content:center;gap:40px;margin-top:50px;flex-wrap:wrap}
+.stat{display:flex;flex-direction:column; background: rgba(255,255,255,0.03); padding: 15px 30px; border-radius: 16px; border: 1px solid var(--border); backdrop-filter: blur(10px);}
+.stat strong{font-family:'Orbitron',sans-serif;font-size:32px;color:var(--accent-2); text-shadow: 0 0 10px rgba(6, 182, 212, 0.5);}
+.stat span{color:var(--muted);font-size:14px; text-transform: uppercase; letter-spacing: 1px; margin-top: 4px;}
+
+/* FILTER */
+.filters{display:flex;justify-content:space-between;align-items:center;gap:16px;margin:40px auto 30px;flex-wrap:wrap}
+.filter-bar{display:flex;gap:10px;flex-wrap:wrap}
+.filter-btn{background:rgba(255,255,255,0.05);border:1px solid var(--border);color:var(--muted);padding:10px 22px;border-radius:12px;cursor:pointer;font-weight:600;font-size:14px;transition:all .3s}
+.filter-btn:hover{border-color:var(--accent);color:var(--text); background: rgba(139, 92, 246, 0.1);}
+.filter-btn.active{background:linear-gradient(135deg,var(--accent),#a855f7);border-color:transparent;color:#fff; box-shadow: 0 0 20px rgba(139, 92, 246, 0.4);}
+.sort-select{background:rgba(255,255,255,0.05);border:1px solid var(--border);color:var(--text);padding:10px 16px;border-radius:12px;font-size:14px;cursor:pointer; outline: none;}
+.sort-select option { background: var(--bg-2); }
+
+/* PRODUCT GRID */
+.product-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:24px;padding-bottom:60px}
+.product-card{background:var(--card);border:1px solid var(--border);border-radius:20px;overflow:hidden;transition:all .4s ease;display:flex;flex-direction:column; position: relative; backdrop-filter: blur(10px);}
+.product-card:hover{transform:translateY(-10px);border-color:var(--accent);box-shadow:0 20px 40px rgba(139, 92, 246, 0.3); z-index: 10;}
+.product-img{height:180px;display:grid;place-items:center;font-size:80px;background:linear-gradient(135deg,rgba(30,30,60,0.8),rgba(50,20,80,0.8));position:relative; overflow: hidden;}
+.badge{position:absolute;top:12px;left:12px;background:linear-gradient(135deg,var(--accent-3),#f43f5e);color:#fff;font-size:12px;font-weight:800;padding:6px 12px;border-radius:8px; z-index: 2; text-transform: uppercase;}
+.badge.vip{background:linear-gradient(135deg,#eab308,#ca8a04); box-shadow: 0 0 15px rgba(234, 179, 8, 0.6);}
+.product-body{padding:20px;display:flex;flex-direction:column;flex:1}
+.product-name{font-size:18px;font-weight:800;margin-bottom:8px; color: #fff;}
+.product-desc{color:var(--muted);font-size:13px;flex:1;margin-bottom:16px; line-height: 1.5;}
+.product-meta{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px}
+.product-rating{color:#fbbf24;font-size:14px;font-weight: 600; background: rgba(251, 191, 36, 0.1); padding: 4px 8px; border-radius: 6px;}
+.product-price{font-family:'Orbitron',sans-serif;font-size:22px;color:var(--accent-2);font-weight:900; text-shadow: 0 0 10px rgba(6, 182, 212, 0.4);}
+.btn-buy{width:100%;background:linear-gradient(135deg,var(--accent),#a855f7);color:#fff;border:none;border-radius:12px;padding:14px;font-weight:800;cursor:pointer;transition:all .3s;font-size:15px; text-transform: uppercase; letter-spacing: 1px;}
+.btn-buy:hover{transform:scale(1.03); box-shadow: 0 10px 20px rgba(139, 92, 246, 0.5);}
+.empty-state{text-align:center;padding:80px 20px;color:var(--muted);font-size:20px}
+
+/* SECTION TITLE & FEATURES */
+.section-title{text-align:center;font-family:'Orbitron',sans-serif;font-size:clamp(24px,4vw,38px);margin:80px 0 40px; text-transform: uppercase;}
+.feature-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px}
+.feature-card{background:var(--card);border:1px solid var(--border);border-radius:20px;padding:32px 24px;text-align:center;transition:all .3s; backdrop-filter: blur(10px);}
+.feature-card:hover{border-color:var(--accent-2);transform:translateY(-6px); box-shadow: 0 15px 30px rgba(6, 182, 212, 0.2);}
+.feature-icon{font-size:48px;margin-bottom:16px;}
+.feature-card h3{font-size:18px;margin-bottom:12px; color: #fff;}
+.feature-card p{color:var(--muted);font-size:14px}
+
+/* FOOTER */
+.footer{border-top:1px solid var(--border);background:rgba(5,5,15,0.8);margin-top:60px; backdrop-filter: blur(10px);}
+.footer-inner{display:grid;grid-template-columns:2fr 1fr 1fr;gap:40px;padding:60px 20px;max-width:1200px;margin:0 auto}
+.footer-brand p{color:var(--muted);margin-top:12px;font-size:14px}
+.footer-col{display:flex;flex-direction:column;gap:12px}
+.footer-col h4{margin-bottom:8px;font-size:16px; color: #fff; letter-spacing: 1px;}
+.footer-col a{color:var(--muted);text-decoration:none;font-size:14px;transition:color .2s; display: inline-block;}
+.footer-col a:hover{color:var(--accent-2); transform: translateX(5px);}
+.footer-bottom{text-align:center;padding:24px;color:var(--muted);font-size:13px;border-top:1px solid var(--border)}
+
+/* CART DRAWER */
+.cart-overlay{position:fixed;inset:0;background:rgba(0,0,0,.8);backdrop-filter:blur(6px);opacity:0;pointer-events:none;transition:opacity .4s;z-index:200}
+.cart-overlay.show{opacity:1;pointer-events:auto}
+.cart-drawer{position:fixed;top:0;right:0;width:400px;max-width:100vw;height:100vh;background:var(--bg-2);border-left:1px solid var(--border);z-index:201;transform:translateX(100%);transition:transform .4s cubic-bezier(.4,0,.2,1);display:flex;flex-direction:column; box-shadow: -20px 0 50px rgba(0,0,0,0.5);}
+.cart-drawer.show{transform:translateX(0)}
+.cart-header{display:flex;justify-content:space-between;align-items:center;padding:24px;border-bottom:1px solid var(--border)}
+.cart-header h3 { font-family: 'Orbitron', sans-serif; }
+.close-btn{background:rgba(255,255,255,0.05);border:none;color:var(--text);font-size:20px;cursor:pointer; width: 36px; height: 36px; border-radius: 50%; display: grid; place-items: center; transition: all 0.2s;}
+.close-btn:hover{background: #ef4444;}
+.cart-items{flex:1;overflow-y:auto;padding:20px;display:flex;flex-direction:column;gap:16px}
+.cart-item{display:flex;gap:16px;align-items:center;background:var(--card);border:1px solid var(--border);border-radius:16px;padding:16px;}
+.cart-item-icon{font-size:36px}
+.cart-item-info{flex:1}
+.cart-item-info h4{font-size:15px;margin-bottom:4px; color: #fff;}
+.cart-item-info span{color:var(--accent-2);font-size:14px;font-weight:700}
+.cart-item-remove{background:none;border:none;color:#ef4444;cursor:pointer;font-size:18px; padding: 8px;}
+.cart-footer{padding:24px;border-top:1px solid var(--border); background: rgba(0,0,0,0.2);}
+.cart-total{display:flex;justify-content:space-between;margin-bottom:20px;font-size:18px; font-weight: 700;}
+.cart-total strong{color:var(--accent-2);font-family:'Orbitron',sans-serif; font-size: 24px;}
+.btn-checkout{width:100%;background:linear-gradient(135deg,var(--success),#059669);color:#fff;border:none;border-radius:12px;padding:16px;font-weight:800;cursor:pointer;font-size:16px; text-transform: uppercase; transition: all 0.3s;}
+.btn-checkout:hover{opacity:.9; transform: scale(1.02);}
+.cart-empty{text-align:center;color:var(--muted);padding:60px 20px;}
+
+/* MODAL ZALO */
+.modal-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.8); backdrop-filter: blur(8px); z-index: 400; display: flex; align-items: center; justify-content: center; opacity: 0; pointer-events: none; transition: all 0.3s; }
+.modal-overlay.show { opacity: 1; pointer-events: auto; }
+.modal-box { background: var(--bg-2); border: 1px solid var(--accent); border-radius: 24px; padding: 40px; text-align: center; max-width: 400px; width: 90%; box-shadow: 0 0 50px rgba(139, 92, 246, 0.3); transform: scale(0.8); transition: all 0.4s ease; }
+.modal-overlay.show .modal-box { transform: scale(1); }
+.modal-icon { font-size: 60px; margin-bottom: 20px; animation: bounce 2s infinite; }
+@keyframes bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-15px); } }
+.modal-box h3 { font-size: 24px; margin-bottom: 12px; color: #fff; }
+.modal-box p { color: var(--muted); margin-bottom: 24px; }
+.zalo-btn { display: inline-block; background: #0068FF; color: #fff; text-decoration: none; padding: 14px 32px; border-radius: 12px; font-weight: 700; font-size: 18px; transition: all 0.3s; box-shadow: 0 4px 15px rgba(0, 104, 255, 0.4); }
+.zalo-btn:hover { transform: translateY(-3px); box-shadow: 0 8px 25px rgba(0, 104, 255, 0.6); }
+
+@media(max-width:768px){
+  .nav{display:none}
+  .search-box input{width:140px}
+  .footer-inner{grid-template-columns:1fr;gap:30px; text-align: center;}
+  .footer-col { align-items: center; }
+  .hero-stats{gap:20px}
+  .filters{flex-direction:column;align-items:stretch}
+  .product-grid { grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 12px; }
+  .product-img { height: 140px; font-size: 60px; }
+  .product-body { padding: 12px; }
+  .product-name { font-size: 15px; }
+  .product-price { font-size: 18px; }
+}
+</style>
+</head>
+<body>
+
+<header class="header">
+  <div class="container header-inner">
+    <a href="#" class="logo"><span class="logo-icon">⚡</span><span>ACC<span class="accent">SHOP</span></span></a>
+    <nav class="nav">
+      <a href="#products">Sản phẩm</a>
+      <a href="#features">Cam kết</a>
+    </nav>
+    <div class="header-actions">
+      <div class="search-box">
+        <input type="text" id="searchInput" placeholder="Tìm acc...">
+        <span class="search-icon">🔍</span>
+      </div>
+      <button class="cart-btn" id="cartBtn">🛒 <span class="cart-count" id="cartCount">0</span></button>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <h1 class="hero-title">Shop Acc <span class="gradient">Blox Fruit & Game</span></h1>
+    <p class="hero-sub">Giao acc tự động 24/7 • Bảo hành trọn đời • Hoàn tiền 100% nếu sai mô tả</p>
+    <div class="hero-stats">
+      <div class="stat"><strong>12.5K+</strong><span>Acc đã bán</span></div>
+      <div class="stat"><strong>4.9★</strong><span>Đánh giá</span></div>
+      <div class="stat"><strong>24/7</strong><span>Hỗ trợ Zalo</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="container filters" id="products">
+  <div class="filter-bar">
+    <button class="filter-btn active" data-cat="all">Tất cả</button>
+    <button class="filter-btn" data-cat="bloxfruit">Blox Fruit</button>
+    <button class="filter-btn" data-cat="lienquan">Liên Quân</button>
+    <button class="filter-btn" data-cat="freefire">Free Fire</button>
+  </div>
+  <select id="sortSelect" class="sort-select">
+    <option value="default">Sắp xếp: Mặc định</option>
+    <option value="price-asc">Giá tăng dần</option>
+    <option value="price-desc">Giá giảm dần</option>
+  </select>
+</section>
+
+<section class="container">
+  <div class="product-grid" id="productGrid"></div>
+  <div class="empty-state" id="emptyState" style="display:none"><p>😢 Không tìm thấy acc nào phù hợp</p></div>
+</section>
+
+<section class="features container" id="features">
+  <h2 class="section-title">Tại sao chọn <span class="gradient">AccShop</span>?</h2>
+  <div class="feature-grid">
+    <div class="feature-card"><div class="feature-icon">⚡</div><h3>Giao acc tự động</h3><p>Nhận acc ngay sau khi thanh toán, không cần chờ đợi.</p></div>
+    <div class="feature-card"><div class="feature-icon">🛡️</div><h3>Bảo hành trọn đời</h3><p>Hỗ trợ đổi/hoàn nếu acc có vấn đề trong suốt thời gian sử dụng.</p></div>
+    <div class="feature-card"><div class="feature-icon">💯</div><h3>Hoàn tiền 100%</h3><p>Acc sai mô tả? Hoàn tiền ngay lập tức, không cần lý do.</p></div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="footer-brand"><a href="#" class="logo" style="font-size: 20px;"><span class="logo-icon">⚡</span> ACCSHOP</a><p>Shop acc game uy tín hàng đầu Việt Nam.</p></div>
+    <div class="footer-col"><h4>Liên kết</h4><a href="#products">Sản phẩm</a><a href="#features">Cam kết</a></div>
+    <div class="footer-col"><h4>Liên hệ</h4><a href="https://zalo.me/0325518652" target="_blank">💬 Zalo: 0325518652</a></div>
+  </div>
+  <div class="footer-bottom">© 2026 AccShop. All rights reserved.</div>
+</footer>
+
+<div class="cart-overlay" id="cartOverlay"></div>
+<aside class="cart-drawer" id="cartDrawer">
+  <div class="cart-header"><h3>🛒 Giỏ hàng</h3><button class="close-btn" id="closeCart">✕</button></div>
+  <div class="cart-items" id="cartItems"></div>
+  <div class="cart-footer">
+    <div class="cart-total">Tổng: <strong id="cartTotal">0đ</strong></div>
+    <button class="btn-checkout" id="checkoutBtn">Thanh toán ngay</button>
+  </div>
+</aside>
+
+<!-- Bảng hiện Zalo -->
+<div class="modal-overlay" id="zaloModal">
+  <div class="modal-box">
+    <div class="modal-icon">💬</div>
+    <h3>Liên hệ mua Acc</h3>
+    <p>Vui lòng nhắn Zalo để được hỗ trợ thanh toán và nhận Acc ngay lập tức!</p>
+    <a href="https://zalo.me/0325518652" target="_blank" class="zalo-btn">Nhắn Zalo: 0325518652</a>
+    <button class="close-btn" id="closeModal" style="margin: 20px auto 0; display: block;">Đóng</button>
+  </div>
+</div>
+
+<script>
+// DỮ LIỆU SẢN PHẨM
+const products = [
+  {id: 9, name: 'Acc Blox Fruit LV 2805', cat: 'bloxfruit', icon: '🍎', price: 70000, rating: 5.0, desc: 'Level 2805, Dough, Yama, Cursed Dual Katana, Valkyrie Helm, Pale Scarf, Full nguyên liệu.', badge: 'VIP'},
+  {id: 1, name: 'Acc Liên Quân Cao Thủ', cat: 'lienquan', icon: '⚔️', price: 250000, rating: 4.9, desc: 'Rank Cao Thủ, 120 skin, full tướng', badge: 'HOT'},
+  {id: 2, name: 'Acc Liên Quân Tinh Anh', cat: 'lienquan', icon: '🗡️', price: 120000, rating: 4.7, desc: 'Rank Tinh Anh, 60 skin, 80 tướng', badge: ''},
+  {id: 3, name: 'Acc Free Fire Kim Cương', cat: 'freefire', icon: '🔥', price: 180000, rating: 4.8, desc: 'Rank Kim Cương, 50 skin, nhiều nhân vật', badge: 'HOT'}
+];
+
+let cart = JSON.parse(localStorage.getItem('accshop_cart')) || [];
+let currentFilter = 'all';
+let currentSort = 'default';
+let searchQuery = '';
+
+const grid = document.getElementById('productGrid');
+const emptyState = document.getElementById('emptyState');
+const cartDrawer = document.getElementById('cartDrawer');
+const cartOverlay = document.getElementById('cartOverlay');
+const cartItemsEl = document.getElementById('cartItems');
+const cartTotalEl = document.getElementById('cartTotal');
+const cartCountEl = document.getElementById('cartCount');
+const zaloModal = document.getElementById('zaloModal');
+
+const formatPrice = (p) => p.toLocaleString('vi-VN') + 'đ';
+
+function renderProducts() {
+  let list = products.filter(p => currentFilter === 'all' || p.cat === currentFilter);
+  if (searchQuery) list = list.filter(p => p.name.toLowerCase().includes(searchQuery.toLowerCase()));
+  if (currentSort === 'price-asc') list.sort((a, b) => a.price - b.price);
+  if (currentSort === 'price-desc') list.sort((a, b) => b.price - a.price);
+
+  if (list.length === 0) {
+    grid.innerHTML = '';
+    emptyState.style.display = 'block';
+    return;
+  }
+  emptyState.style.display = 'none';
+
+  grid.innerHTML = list.map(p => `
+    <div class="product-card">
+      <div class="product-img">
+        ${p.badge ? `<span class="badge ${p.badge === 'VIP' ? 'vip' : ''}">${p.badge}</span>` : ''}
+        ${p.icon}
+      </div>
+      <div class="product-body">
+        <h3 class="product-name">${p.name}</h3>
+        <p class="product-desc">${p.desc}</p>
+        <div class="product-meta">
+          <span class="product-rating">⭐ ${p.rating}</span>
+          <span class="product-price">${formatPrice(p.price)}</span>
+        </div>
+        <button class="btn-buy" data-id="${p.id}">Mua Acc Này</button>
+      </div>
+    </div>
+  `).join('');
+
+  grid.querySelectorAll('.btn-buy').forEach(btn => {
+    btn.addEventListener('click', () => {
+      // Bấm mua là hiện Zalo
+      zaloModal.classList.add('show');
+    });
+  });
+}
+
+function renderCart() {
+  const totalQty = cart.reduce((s, i) => s + i.qty, 0);
+  cartCountEl.textContent = totalQty;
+
+  if (cart.length === 0) {
+    cartItemsEl.innerHTML = '<div class="cart-empty">🛒 Giỏ hàng trống</div>';
+    cartTotalEl.textContent = '0đ';
+    return;
+  }
+
+  cartItemsEl.innerHTML = cart.map(item => `
+    <div class="cart-item">
+      <div class="cart-item-icon">${item.icon}</div>
+    
